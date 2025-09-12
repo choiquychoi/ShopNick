@@ -7,7 +7,7 @@
 @section('content')
 
 <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-10">
             <div class="card">
                 <div class="card-header">Liệt kê danh mục game</div>
 
@@ -19,7 +19,7 @@
                     @endif
                     <a href="{{route('category.create')}}" class="btn btn-success">Thêm danh mục game</a>
 
-                    <table class="table table-striped">
+                    <table class="table table-striped" id="myTable">
                         <thead>
                         <tr>
                             <th>ID</th>
@@ -28,7 +28,6 @@
                             <th>Hiển thị</th>
                             <th>Hình ảnh</th>
                             <th>Quản lý</th>
-                            <th></th>
                         </tr>
                         </thead>
                         <tbody>
@@ -45,12 +44,21 @@
                                 @endif
                             </td>
                             <td><img src="{{asset('uploads/category/'.$cate->image)}}" height="100px" weight="100px"></td>
-                            <td>Doe</td>
-                            <td><a href="" class="btn btn-danger">xóa</a><a href="" class="btn btn-warning">sửa</a></td>
+                            <td>
+                                <form action="{{ route('category.destroy',[$cate->id]) }}" method="POST">
+                                    @method('DELETE')
+                                    @csrf
+                                    <button onclick="return confirm('Bạn muốn xóa danh mục game này không?');" class="btn btn-danger">
+                                        Delete
+                                    </button>
+                                </form>
+                                <a href="{{route('category.edit',$cate->id)}}" class="btn btn-warning">sửa</a>
+                            </td>
                         </tr>
                             @endforeach
                         </tbody>
                     </table>
+                    {{ $category->links('pagination::bootstrap-4') }}
                 </div>
             </div>
         </div>

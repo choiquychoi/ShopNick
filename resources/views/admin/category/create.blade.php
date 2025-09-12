@@ -9,6 +9,15 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">Liệt kê danh mục game</div>
+                @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
 
                 <div class="card-body">
                     @if (session('status'))
@@ -21,21 +30,21 @@
                     @csrf
                         <div class="form-group">
                             <label for="exampleInputEmail1">Title</label>
-                            <input type="text" class="form-control" placeholder="..." name="title">
+                            <input type="text" class="form-control" require placeholder="..." name="title">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Image</label>
-                            <input type="file" class="form-control-file" name="image"  placeholder="...">
+                            <input type="file" class="form-control-file" require name="image"  placeholder="...">
                         </div>
 
                         <div class="form-group">
                             <label for="exampleInputPassword1">Description</label>
-                            <textarea name="description" class="form-control" placeholder="..."></textarea>
+                            <textarea name="description" class="form-control" require placeholder="..."></textarea>
                         </div>
 
                         <div class="form-group">
                             <label for="exampleFormControlSelect1">Status</label>
-                            <select class="form-control" name="status">
+                            <select require class="form-control" name="status">
                                 <option value="0">On</option>
                                 <option value="1">Off</option>
                             </select>
