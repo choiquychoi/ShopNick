@@ -24,6 +24,7 @@
                         <tr>
                             <th>ID</th>
                             <th>Tên danh mục</th>
+                            <th>slug</th>
                             <th>Mô tả</th>
                             <th>Hiển thị</th>
                             <th>Hình ảnh</th>
@@ -35,6 +36,7 @@
                         <tr>
                             <td>{{$key}}</td>
                             <td>{{$cate->title}}</td>
+                            <td>{{$cate->slug}}</td>
                             <td>{{$cate->description}}</td>
                             <td>
                                 @if($cate->status==0)
