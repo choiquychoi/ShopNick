@@ -42,6 +42,7 @@ class CategoryController extends Controller
         $data = $request->validate(
             [
                 'title' => 'required|unique:categories|max:255',
+                'slug' => 'required|unique:categories|max:255',
                 'description' => 'required|max:255',
                 'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048|dimensions:min_width=100,min_height=100,max_width=2000,max_height=2000',
                 'status' => 'required',
@@ -49,6 +50,8 @@ class CategoryController extends Controller
             [
                 'title.unique' => 'Tên danh mục game đã có, xin điền tên khác',
                 'title.required' => 'Tên danh mục game phải có',
+                'slug.unique' => 'Tên slug danh mục game đã có, xin điền tên khác',
+                'slug.required' => 'Tên slug danh mục game phải có',
                 'description.required' => 'Mô tả danh mục game phải có nhé',
                 'image.required' => 'Hình ảnh phải có',
             ]
@@ -57,6 +60,7 @@ class CategoryController extends Controller
 
         $category = new category();
         $category->title = $data['title'];
+        $category->slug = $data['slug'];
         $category->image = 'hinhanh1.jpg';
         $category->description = $data['description'];
         $category->status = $data['status'];
@@ -108,13 +112,14 @@ class CategoryController extends Controller
     {
         $data = $request->validate(
             [
-                'title' => 'required|unique:categories|max:255',
+                'title' => 'required|max:255',
+                'slug' => 'required|unique:categories|max:255',
                 'description' => 'required|max:255',
                 'status' => 'required',
             ],
             [
-                'title.unique' => 'Tên danh mục game đã có, xin điền tên khác',
                 'title.required' => 'Tên danh mục game phải có',
+                'slug.required' => 'Tên slug danh mục game phải có',
                 'description.required' => 'Mô tả danh mục game phải có nhé',
                 'image.required' => 'Hình ảnh phải có',
             ]
@@ -122,7 +127,7 @@ class CategoryController extends Controller
 
         $category = category::find($id);
         $category->title = $data['title'];
-
+        $category->slug = $data['slug'];
         $category->description = $data['description'];
         $category->status = $data['status'];
         //them anh vao folder
