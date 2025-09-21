@@ -270,12 +270,10 @@
                             <li class="c-menu-type-classic">
                             <a  rel=""  href="#" class="c-link dropdown-toggle ">Tin tức<span class="c-arrow c-toggler"></span></a>
                             <ul id="children-of-42" class="dropdown-menu c-menu-type-classic c-pull-left " >
-                                <li class="c-menu-type-classic"><a  rel="" href="/blog" class="">Blog</a></li>
-                                <li class="c-menu-type-classic"><a  rel="" href="/uy-tin-cua-shop" class="">UY T&Iacute;N CỦA SHOP</a></li>
-                                <li class="c-menu-type-classic"><a  rel="" href="/danh-sach-gdv-group" class="">Danh S&aacute;ch GDV group</a></li>
-                                <li class="c-menu-type-classic"><a  rel="" href="/dich-vu-game" class="">Dịch Vụ Game</a></li>
-                                <li class="c-menu-type-classic"><a  rel="" href="https://nick.vn/blog/dieu-khoan-su-dung-website-nickvn" class="">Điều khoản sử dụng website</a></li>
-                                <li class="c-menu-type-classic"><a  rel="" href="https://nick.vn/blog/chinh-sach-tai-nickvn" class="">Ch&iacute;nh s&aacute;ch tại Nick.vn</a></li>
+                                <li class="c-menu-type-classic"><a  rel="blogs  Game" href="{{route('blogs')}}" class="">Blog</a></li>
+                                @foreach($blogs_huongdan as $key => $bloghd) 
+                                <li class="c-menu-type-classic"><a  rel="" href="{{route('blogs_detail',[$bloghd->slug])}}" class="">{{$bloghd->title}}</a></li>
+                                @endforeach
                             </ul>
                             </li>
                             <li><a href="/login" class="c-btn-border-opacity-04 c-btn btn-no-focus c-btn-header btn btn-sm c-btn-border-1x c-btn-dark c-btn-circle c-btn-uppercase c-btn-sbold">
@@ -337,21 +335,13 @@
             <div class="c-content-box">
                 <div id="slider" class="owl-theme section section-cate slideshow_full_width ">
                 <div id="slide_banner" class="owl-carousel">
+                    @foreach($slider as $key => $sli)
                     <div class="item">
-                        <a href="/" alt="banner chung">
-                        <img src="img/banner.jpg" alt="banner chung">
+                        <a href="#" alt="{{$sli->title}}">
+                            <img src="{{asset('uploads/slider/'.$sli->image)}}" width="100%" height="300px" alt="{{$sli->title}}">
                         </a>
                     </div>
-                    <div class="item">
-                        <a href="/" alt="nitvn2">
-                        <img src="img/banner.jpg" alt="nitvn2">
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="/" alt="nitvn3">
-                        <img src="img/banner.jpg" alt="nitvn3">
-                        </a>
-                    </div>
+                    @endforeach
                 </div>
                 </div>
             </div>

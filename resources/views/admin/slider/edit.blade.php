@@ -8,7 +8,7 @@
 <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Liệt kê danh mục game</div>
+                <div class="card-header">Cập  slider game</div>
                 @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul>
@@ -25,25 +25,24 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <a href="{{route('category.index')}}" class="btn btn-success">liệt danh mục game</a>
-                    <form action="{{route('category.store')}}" method="POST" enctype="multipart/form-data">
+                    <a href="{{route('slider.index')}}" class="btn btn-success">liệt kê slider game</a>
+                    <form action="{{route('slider.update',[$slider->id])}}" method="POST" enctype="multipart/form-data">
                     @csrf
+                    @method('PUT')
                         <div class="form-group">
                             <label for="exampleInputEmail1">Title</label>
-                            <input type="text" class="form-control" id="slug" onkeyup="ChangeToSlug()" require placeholder="..." name="title">
+                            <input type="text" class="form-control" require value="{{$slider->title}}" placeholder="..." name="title">
                         </div>
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Slug</label>
-                            <input type="text" class="form-control" require placeholder="..." id="convert_slug" name="slug">
-                        </div>
+                        
                         <div class="form-group">
                             <label for="exampleInputPassword1">Image</label>
-                            <input type="file" class="form-control-file" require name="image"  placeholder="...">
+                            <input type="file" class="form-control-file" name="image"  placeholder="...">
+                            <img src="{{asset('uploads/slider/'.$slider->image)}}" height="100px" weight="100px">
                         </div>
 
                         <div class="form-group">
                             <label for="exampleInputPassword1">Description</label>
-                            <textarea name="description" class="form-control" require placeholder="..."></textarea>
+                            <textarea name="description" class="form-control" require placeholder="...">{{$slider->description}}</textarea>
                         </div>
 
                         <div class="form-group">
@@ -58,7 +57,7 @@
                                 @endif
                             </select>
                         </div>
-                        <button type="submit" class="btn btn-primary">Add</button>
+                        <button type="submit" class="btn btn-primary">Cập nhật</button>
                     </form>
                 </div>
             </div>

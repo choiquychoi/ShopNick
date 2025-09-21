@@ -8,7 +8,7 @@
 <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Liệt kê danh mục game</div>
+                <div class="card-header">thêm slider game</div>
                 @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul>
@@ -25,17 +25,15 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <a href="{{route('category.index')}}" class="btn btn-success">liệt danh mục game</a>
-                    <form action="{{route('category.store')}}" method="POST" enctype="multipart/form-data">
+                    <a href="{{route('slider.index')}}" class="btn btn-success">liệt kê slider game</a>
+                    
+                    <form action="{{route('slider.store')}}" method="POST" enctype="multipart/form-data">
                     @csrf
                         <div class="form-group">
                             <label for="exampleInputEmail1">Title</label>
-                            <input type="text" class="form-control" id="slug" onkeyup="ChangeToSlug()" require placeholder="..." name="title">
+                            <input type="text" class="form-control" require placeholder="..." name="title">
                         </div>
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Slug</label>
-                            <input type="text" class="form-control" require placeholder="..." id="convert_slug" name="slug">
-                        </div>
+                        
                         <div class="form-group">
                             <label for="exampleInputPassword1">Image</label>
                             <input type="file" class="form-control-file" require name="image"  placeholder="...">
@@ -48,18 +46,14 @@
 
                         <div class="form-group">
                             <label for="exampleFormControlSelect1">Status</label>
-                            <select class="form-control" require name="status">
-                                @if($category->status==0)
-                                <option value="0" selected>On</option>
-                                <option value="1">Off</option>
-                                @else
+                            <select require class="form-control" name="status">
                                 <option value="0">On</option>
-                                <option value="1" selected >Off</option>
-                                @endif
+                                <option value="1">Off</option>
                             </select>
                         </div>
                         <button type="submit" class="btn btn-primary">Add</button>
                     </form>
+
                 </div>
             </div>
         </div>

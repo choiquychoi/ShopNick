@@ -4,6 +4,9 @@
             <li class="nav-item active">
                 <a class="nav-link" target="_blank" href="{{url('/home')}}">Dashboard</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('slider.index')}}">Slider</a>
+            </li>
             <li class="nav-item active">
                 <a class="nav-link" target="_blank" href="{{url('/')}}">Trang chủ <span class="sr-only">(current)</span></a>
             </li>
@@ -11,10 +14,10 @@
                 <a class="nav-link" href="{{route('category.index')}}">Danh mục game</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Dịch vụ game </a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" href="#">Nick game</a>
+            </li> 
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('blog.index')}}">Blogs</a>
             </li>           
             </ul>
         </div>
