@@ -49,13 +49,8 @@
                         <div class="form-group">
                             <label for="exampleFormControlSelect1">Status</label>
                             <select class="form-control" require name="status">
-                                @if($category->status==0)
-                                <option value="0" selected>On</option>
-                                <option value="1">Off</option>
-                                @else
                                 <option value="0">On</option>
-                                <option value="1" selected >Off</option>
-                                @endif
+                                <option value="1">Off</option>
                             </select>
                         </div>
                         <button type="submit" class="btn btn-primary">Add</button>

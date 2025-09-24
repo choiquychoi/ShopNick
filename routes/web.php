@@ -6,6 +6,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\AccessoriesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,8 @@ Route::get('home', [HomeController::class, 'index'])->name('home');
 
 // category
 Route::resource('/category', CategoryController::class);
+// category
+Route::resource('/accessories', AccessoriesController::class);
 //slider
 Route::resource('/slider', SliderController::class); 
 //blog

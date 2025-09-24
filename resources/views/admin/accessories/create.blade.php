@@ -8,7 +8,7 @@
 <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">thêm slider game</div>
+                <div class="card-header">Thêm phụ kiện game</div>
                 @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul>
@@ -25,23 +25,12 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <a href="{{route('slider.index')}}" class="btn btn-success">liệt kê slider game</a>
-                    
-                    <form action="{{route('slider.store')}}" method="POST" enctype="multipart/form-data">
+                    <a href="{{route('accessories.index')}}" class="btn btn-success">liệt kê phụ kiện game</a>
+                    <form action="{{route('accessories.store')}}" method="POST" enctype="multipart/form-data">
                     @csrf
                         <div class="form-group">
                             <label for="exampleInputEmail1">Title</label>
                             <input type="text" class="form-control" require placeholder="..." name="title">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Image</label>
-                            <input type="file" class="form-control-file" require name="image"  placeholder="...">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Description</label>
-                            <textarea name="description" class="form-control" require placeholder="..."></textarea>
                         </div>
 
                         <div class="form-group">
@@ -51,9 +40,17 @@
                                 <option value="1">Off</option>
                             </select>
                         </div>
-                        <button type="submit" class="btn btn-primary">Add</button>
-                    </form>
 
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Thuộc game</label>
+                            <select class="form-control" require name="category_id">
+                                @foreach($category as $key => $cate)
+                                    <option value="{{$cate->id}}">{{$cate->title}}</option> 
+                                @endforeach
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Thêm phụ kiện</button>
+                    </form>
                 </div>
             </div>
         </div>

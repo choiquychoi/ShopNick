@@ -13,4 +13,8 @@ class Category extends Model
     protected $filltable = [
         'title', 'description', 'image', 'status', 'order_category'
     ];
+
+        public function accessories(){
+        return $this->belongsTo(Accessories::class);
+    }
 }
