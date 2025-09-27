@@ -11,7 +11,7 @@
                     <a class="nav-link" href="{{route('accessories.index')}}">Phụ kiện</a>
                 </li> 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Nick game</a>
+                    <a class="nav-link" href="{{route('nick.index')}}">Nick game</a>
                 </li> 
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('blog.index')}}">Blogs</a>

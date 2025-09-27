@@ -132,7 +132,28 @@
             $('#myTable').DataTable();
         });
     </script>
-    
+
+    <script type="text/javascript">
+        $(".choose_category").change(function(){
+            var category_id = $(this).val();
+            // alert(category_id);
+            if(category_id == '0'){
+                alert("Vui lòng chọn danh mục game!")
+            } else {
+                $.ajax({
+                    url: "{{route('choose_category')}}",
+                    method: "POST",
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    data: {category_id: category_id},
+                    success:function(data) {
+                        $("#show_attribute").html(data);
+                    }
+                })
+            }
+        })
+    </script>
 
 </body>
 </html>

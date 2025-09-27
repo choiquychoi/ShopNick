@@ -14,7 +14,10 @@ class Category extends Model
         'title', 'description', 'image', 'status', 'order_category'
     ];
 
-        public function accessories(){
+    public function accessories(){
         return $this->belongsTo(Accessories::class);
+    }
+    public function nick(){
+        return $this->hasMany(Nick::class);
     }
 }

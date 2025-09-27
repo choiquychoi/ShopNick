@@ -37,98 +37,98 @@
             </div>
             </div>
             <div class="row  hidden-xs hidden-sm" style="margin-bottom: 15px">
-            <div class="m-l-10 m-r-10">
-                <form class="form-inline m-b-10" role="form" method="get" data-hs-cf-bound="true">
-                    <div class="col-md-3 col-sm-4 p-5 field-search">
-                        <div class="input-group c-square">
-                        <span class="input-group-addon">Tìm kiếm</span>
-                        <input type="text" class="form-control c-square" value="" placeholder="Tìm kiếm" name="find">
+                <div class="m-l-10 m-r-10">
+                    <form class="form-inline m-b-10" role="form" method="get" data-hs-cf-bound="true">
+                        <div class="col-md-3 col-sm-4 p-5 field-search">
+                            <div class="input-group c-square">
+                            <span class="input-group-addon">Tìm kiếm</span>
+                            <input type="text" class="form-control c-square" value="" placeholder="Tìm kiếm" name="find">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-3 col-sm-4 p-5 field-search">
-                        <div class="input-group c-square">
-                        <span class="input-group-addon">Mã số</span>
-                        <input type="text" class="form-control c-square" value="" placeholder="Mã số" name="id">
+                        <div class="col-md-3 col-sm-4 p-5 field-search">
+                            <div class="input-group c-square">
+                            <span class="input-group-addon">Mã số</span>
+                            <input type="text" class="form-control c-square" value="" placeholder="Mã số" name="id">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-3 col-sm-4 col-xs-12  p-5 field-search">
-                        <div class="input-group c-square">
-                        <span class="input-group-addon">Giá tiền</span>
-                        <select style="" class="form-control c-square" name="price">
-                            <option value="">Chọn giá tiền</option>
-                            <option value="duoi-50k">Dưới 50K</option>
-                            <option value="tu-50k-200k">Từ 50K - 200K</option>
-                            <option value="tu-200k-500k">Từ 200K - 500K</option>
-                            <option value="tu-500k-1-trieu">Từ 500K - 1 Triệu</option>
-                            <option value="tren-1-trieu">Trên 1 Triệu</option>
-                            <option value="tren-5-trieu">Trên 5 Triệu</option>
-                            <option value="tren-10-trieu">Trên 10 Triệu</option>
-                        </select>
+                        <div class="col-md-3 col-sm-4 col-xs-12  p-5 field-search">
+                            <div class="input-group c-square">
+                            <span class="input-group-addon">Giá tiền</span>
+                            <select style="" class="form-control c-square" name="price">
+                                <option value="">Chọn giá tiền</option>
+                                <option value="duoi-50k">Dưới 50K</option>
+                                <option value="tu-50k-200k">Từ 50K - 200K</option>
+                                <option value="tu-200k-500k">Từ 200K - 500K</option>
+                                <option value="tu-500k-1-trieu">Từ 500K - 1 Triệu</option>
+                                <option value="tren-1-trieu">Trên 1 Triệu</option>
+                                <option value="tren-5-trieu">Trên 5 Triệu</option>
+                                <option value="tren-10-trieu">Trên 10 Triệu</option>
+                            </select>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-3 col-sm-4 p-5 field-search">
-                        <div class="input-group c-square">
-                        <span class="input-group-addon">Trạng thái</span>
-                        <select style="" class="form-control c-square" name="status">
-                            <option value="1" selected="">Chưa bán</option>
-                            <option value="0">Đã bán</option>
-                            <option value="3">Đã đặt cọc</option>
-                            <option value="-999">Tất cả</option>
-                        </select>
+                        <div class="col-md-3 col-sm-4 p-5 field-search">
+                            <div class="input-group c-square">
+                            <span class="input-group-addon">Trạng thái</span>
+                            <select style="" class="form-control c-square" name="status">
+                                <option value="1" selected="">Chưa bán</option>
+                                <option value="0">Đã bán</option>
+                                <option value="3">Đã đặt cọc</option>
+                                <option value="-999">Tất cả</option>
+                            </select>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-3 col-sm-4 col-xs-12  p-5 field-search">
-                        <div class="input-group c-square">
-                        <span class="input-group-addon">Rank</span>
-                        <select name="attribute_id_593" class="form-control c-square" title="-- Không chọn --">
-                            <option value="">-- Không chọn --</option>
-                            <option value="596">Đồng</option>
-                            <option value="597">Bạc</option>
-                            <option value="598">Vàng</option>
-                            <option value="599">Bạch Kim</option>
-                            <option value="600">Kim Cương</option>
-                            <option value="601">Cao Thủ</option>
-                            <option value="602">Thách Đấu</option>
-                            <option value="981">Tinh Anh</option>
-                        </select>
+                        <div class="col-md-3 col-sm-4 col-xs-12  p-5 field-search">
+                            <div class="input-group c-square">
+                            <span class="input-group-addon">Rank</span>
+                            <select name="attribute_id_593" class="form-control c-square" title="-- Không chọn --">
+                                <option value="">-- Không chọn --</option>
+                                <option value="596">Đồng</option>
+                                <option value="597">Bạc</option>
+                                <option value="598">Vàng</option>
+                                <option value="599">Bạch Kim</option>
+                                <option value="600">Kim Cương</option>
+                                <option value="601">Cao Thủ</option>
+                                <option value="602">Thách Đấu</option>
+                                <option value="981">Tinh Anh</option>
+                            </select>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-3 col-sm-4 col-xs-12  p-5 field-search">
-                        <div class="input-group c-square">
-                        <span class="input-group-addon">Ngọc 90</span>
-                        <select name="attribute_id_657" class="form-control c-square" title="-- Không chọn --">
-                            <option value="">-- Không chọn --</option>
-                            <option value="658">Không</option>
-                            <option value="659">Có</option>
-                        </select>
+                        <div class="col-md-3 col-sm-4 col-xs-12  p-5 field-search">
+                            <div class="input-group c-square">
+                            <span class="input-group-addon">Ngọc 90</span>
+                            <select name="attribute_id_657" class="form-control c-square" title="-- Không chọn --">
+                                <option value="">-- Không chọn --</option>
+                                <option value="658">Không</option>
+                                <option value="659">Có</option>
+                            </select>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-3 col-sm-4 col-xs-12  p-5 field-search">
-                        <div class="input-group c-square">
-                        <span class="input-group-addon">Nick có tướng trong đá quý</span>
-                        <select name="attribute_id_1173" class="form-control c-square" title="-- Không chọn --">
-                            <option value="">-- Không chọn --</option>
-                            <option value="1175">Không</option>
-                            <option value="1176">Có</option>
-                        </select>
+                        <div class="col-md-3 col-sm-4 col-xs-12  p-5 field-search">
+                            <div class="input-group c-square">
+                            <span class="input-group-addon">Nick có tướng trong đá quý</span>
+                            <select name="attribute_id_1173" class="form-control c-square" title="-- Không chọn --">
+                                <option value="">-- Không chọn --</option>
+                                <option value="1175">Không</option>
+                                <option value="1176">Có</option>
+                            </select>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-3 col-sm-4 col-xs-12  p-5 field-search">
-                        <div class="input-group c-square">
-                        <span class="input-group-addon">Nick có trang phục trong đá quý</span>
-                        <select name="attribute_id_1174" class="form-control c-square" title="-- Không chọn --">
-                            <option value="">-- Không chọn --</option>
-                            <option value="1177">Không</option>
-                            <option value="1178">Có</option>
-                        </select>
+                        <div class="col-md-3 col-sm-4 col-xs-12  p-5 field-search">
+                            <div class="input-group c-square">
+                            <span class="input-group-addon">Nick có trang phục trong đá quý</span>
+                            <select name="attribute_id_1174" class="form-control c-square" title="-- Không chọn --">
+                                <option value="">-- Không chọn --</option>
+                                <option value="1177">Không</option>
+                                <option value="1178">Có</option>
+                            </select>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-3 col-sm-4 p-5 no-radius">
-                        <button type="submit" class="btn c-square c-theme c-btn-green">Tìm kiếm</button>
-                        <a class="btn c-square m-l-0 btn-danger" href="https://nick.vn/garena/lien-quan">Tất cả</a>
-                    </div>
-                </form>
-            </div>
+                        <div class="col-md-3 col-sm-4 p-5 no-radius">
+                            <button type="submit" class="btn c-square c-theme c-btn-green">Tìm kiếm</button>
+                            <a class="btn c-square m-l-0 btn-danger" href="https://nick.vn/garena/lien-quan">Tất cả</a>
+                        </div>
+                    </form>
+                </div>
             </div>
             <div class="filter-product-mobile hidden-md hidden-lg">
             <div class="filter-left form-group">

@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Slider;
-use App\Models\blog;
+use App\Models\Blog;
+use App\Models\Nick;
 class IndexController extends Controller
 {
     public function home() {
@@ -19,15 +20,18 @@ class IndexController extends Controller
         $slider = Slider::orderBy('id','DESC')->where('status',1)->get();
         return view('pages.services',compact('slider','blogs_huongdan'));
     }
-    public function dichVuCon($slug) {
+    public function acc($slug) {
+        $category = Category::where('slug',$slug)->first();
+        $nicks = Nick::where('category_id',$category->id)->where('status',1)->paginate(16);
         $blogs_huongdan = Blog::orderBy('id','DESC')->where('kind_of_blog','huongdan')->get();
         $slider = Slider::orderBy('id','DESC')->where('status',1)->get();
-        return view('pages.sub_services',compact('slug','slider','blogs_huongdan'));
+        return view('pages.acc',compact('slug','slider','blogs_huongdan','nicks','category'));
     }
     public function danhMuc_game($slug) {
         $blogs_huongdan = Blog::orderBy('id','DESC')->where('kind_of_blog','huongdan')->get();
         $slider = Slider::orderBy('id','DESC')->where('status',1)->get();
-        return view('pages.category',compact('slider','blogs_huongdan'));
+        $category = Category::where('slug',$slug)->first();
+        return view('pages.category',compact('slider','blogs_huongdan','category'));
     }
     public function danhMucCon($slug) {
         $blogs_huongdan = Blog::orderBy('id','DESC')->where('kind_of_blog','huongdan')->get();
