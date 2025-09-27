@@ -54,7 +54,7 @@ class GalleryController extends Controller
                 $gallery->save();
             }
         }
-        return redirect()->back();
+        return redirect()->back()->with('status','Cập nhật nick game thành công');
     }
 
     /**
