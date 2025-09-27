@@ -24,6 +24,7 @@
                         <tr>
                             <th>ID</th>
                             <th>Tên nick</th>
+                            <th>Thư viện ảnh</th>
                             <th>mã số</th>
                             <th>Mô tả</th>
                             <th>Hiển thị</th>
@@ -38,6 +39,7 @@
                         <tr>
                             <td>{{$key}}</td>
                             <td>{{$nick->title}}</td>
+                            <td><a href="{{route('gallery.edit',[$nick->id])}}" class="btn btn-primary btn-sm">Thêm thư viện ảnh</a></td>
                             <td>#{{$nick->ms}}</td>
                             <td>{{$nick->description}}</td>
                             <td>

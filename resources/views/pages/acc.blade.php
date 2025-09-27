@@ -148,7 +148,7 @@
                                     </div>
                                     <div class="col-xs-6 ">
                                         <div class="view">
-                                            <a href="/acc/518480">Chi tiết</a>
+                                            <a href="{{route('acc',[$nick->ms])}}">Chi tiết</a>
                                             <!-- <a href="/acc/518480">Chi tiết</a> -->
                                         </div>
                                     </div>

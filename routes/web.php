@@ -8,6 +8,7 @@ use App\Http\Controllers\SliderController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\AccessoriesController;
 use App\Http\Controllers\NickController;
+use App\Http\Controllers\GalleryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,7 @@ Route::get('/dich_vu', [IndexController::class,'dichVu'])->name('dichVu'); // ta
 Route::get('/dich_vu/{slug}', [IndexController::class,'dichVuCon'])->name('dichVuCon'); // dich vu con thuoc dich vu
 Route::get('/danh_muc_game/{slug}', [IndexController::class,'danhMuc_game'])->name('danhMucGame');
 Route::get('/accgame/{slug}', [IndexController::class,'acc'])->name('danhMucCon');
+Route::get('/acc/{ms}', [IndexController::class,'detail_acc'])->name('acc');
 Route::get('/blogs', [IndexController::class,'blogs'])->name('blogs');
 Route::get('/post/{slug}', [IndexController::class,'blogs_detail'])->name('blogs_detail');
 
@@ -43,3 +45,5 @@ Route::resource('/blog', BlogController::class);
 //nick
 Route::resource('/nick', NickController::class); 
 Route::post('/choose_category', [NickController::class, 'choose_category'])-> name('choose_category'); 
+//gallery
+Route::resource('/gallery', GalleryController::class); 
